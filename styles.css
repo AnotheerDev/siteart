@@ -1,0 +1,92 @@
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr, 5fr;
+  grid-template-rows: 70px auto 70px;
+  gap: 3px;
+  grid-template-areas: 
+    "h h h h h h"
+    "m c c c c c"
+    "f f f f f f";
+}
+
+.container > div {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  color: #ffeead;
+} 
+
+.header {
+  grid-area: h;
+  justify-content: center;
+  border: 2px solid grey;
+  border-radius: 30px;
+}
+
+.menu {
+  grid-area: m;
+  justify-content: center;
+  border: 2px solid grey;
+  border-radius: 30px;
+  padding: 20px;
+  max-width: 246px;
+  min-width: 246px;
+}
+
+.content {
+  grid-area: c;
+  justify-content: center;
+  border: 2px solid grey;
+  border-radius: 30px;
+  padding: 20px;
+  min-width: 1628px;
+}
+
+.footer {
+  grid-area: f;
+  justify-content: space-around;
+  border: 2px solid grey;
+  border-radius: 30px;
+}
+
+img { 
+  height: 50vh;
+  width: 50vh;
+  float: left;
+  margin-right: 20px;
+} 
+
+#article {
+  float: right;
+  padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+html, body {
+  background-color: #ffeead;
+  margin: 15px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
